@@ -1,0 +1,53 @@
+@import "../utils/globals";
+@import "../utils/variables";
+  
+.footer-wrapper{
+  background-color: $secondaryDarkGrey;
+  color: $primaryWhite;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  display: flex;
+  gap: 78px;
+  padding-top: 60px;
+  padding-bottom: 51px;
+.container {
+  display: flex;
+  gap: 70px;
+}}
+
+
+.address {
+  line-height: 1.7;
+  font-style: normal;
+&__street{
+  margin-bottom:9px;
+      &--height{
+        margin-top: 20px;
+      }
+    }
+  &__item {
+    margin-bottom:9px;
+  }
+  &__item-underline{
+      margin-bottom:9px;
+      text-decoration: underline;
+      color: rgba(255, 255, 255, 0.6);
+      &:hover,
+      &:focus{
+      color: $primaryBlue;
+      outline: none;
+      transition-duration: $transitionDurationTimeDefault;
+      transition-timing-function: $transitionTimingDefault;}
+    }
+    &__link{
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      &:hover,
+      &:focus{
+      color: $primaryBlue;
+      outline: none;
+      transition-duration: $transitionDurationTimeDefault;
+      transition-timing-function: $transitionTimingDefault;
+    }
+    }
+  }

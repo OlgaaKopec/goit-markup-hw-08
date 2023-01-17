@@ -1,0 +1,23 @@
+@import "../utils/globals";
+@import "../utils/variables";
+
+.activities__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activities{
+  &__text {
+  color: $primaryWhite;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.03em;}
+
+  &__rectangle {
+    background: rgba(47, 48, 58, 0.8);
+    padding: 27px 0;
+    margin-top: -70px;
+    position: relative;
+  }
+}

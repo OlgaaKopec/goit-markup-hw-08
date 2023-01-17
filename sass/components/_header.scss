@@ -1,0 +1,112 @@
+@import "../utils/globals";
+@import "../utils/variables";
+
+.header-wrapper {
+  padding: 24px 0 25px;
+  border-bottom: solid 1px $secodaryWhite;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 93px;
+&__navigation {
+  display: flex;
+  gap: 46px;
+}
+&__navigation-item {
+  color: $primaryBlack;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+    &--active {
+      color: $primaryBlue;
+      &::after {
+        color: $primaryBlue;
+        content: '';
+        height: 4px;
+        display: block;
+        width: 100%;
+        background-color: $primaryBlue;
+        border-radius: 2px;
+        position: absolute;
+        top: 45px;
+        text-decoration: none;
+      }
+    }
+&:hover,
+&:focus{
+  outline: none;
+  color :$primaryBlue;
+  transition-duration: $transitionDurationTimeDefault;
+  transition-timing-function: $transitionTimingDefault;
+  &::after {
+    content: '';
+    height: 4px;
+    display: block;
+    width: 100%;
+    background-color: $primaryBlue;
+    border-radius: 2px;
+    position: absolute;
+    top: 45px;
+  }
+}}
+&__contact {
+  display: flex;
+  gap: 50px;
+  line-height: normal;
+        &:hover,
+        &:focus {
+          color: $primaryBlue;
+          transition-duration: $transitionDurationTimeDefault;
+          transition-timing-function: $transitionTimingDefault;
+        }}
+  &__contact-icon{
+  margin-right: 10px;
+}
+  &__contact-item {
+    font-weight: 500;
+    font-size: 14px;
+    color: $secodaryLightGrey;
+    text-decoration: none;
+    fill: $secodaryLightGrey;
+    &:hover,
+    &:focus{
+    color: $primaryBlue;
+    fill: $primaryBlue;
+    outline: none;
+    transition-duration: $transitionDurationTimeDefault;
+    transition-timing-function: $transitionTimingDefault;
+    }}
+      }
+
+.main-window {
+        background-image: linear-gradient(
+          $secondaryBlackTransparent,
+          $secondaryBlackTransparent
+          ),
+          url('../images/img-background-main.jpg');
+        max-height: 600px;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        display: flex;
+        &__title {
+          font-weight: 900;
+          font-size: 44px;
+          line-height: 1.4;
+          color: $primaryWhite;
+          letter-spacing: 0.06em;
+          margin-top: 100px;
+          margin-left: 252px;
+          margin-right: 252px;
+        }
+      }

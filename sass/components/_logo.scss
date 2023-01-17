@@ -1,0 +1,21 @@
+@import "../utils/globals";
+@import "../utils/variables";
+
+.logo{
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+
+  &__name-start {
+    color: $primaryBlue;
+  }
+  &__name-end {
+    color: $primaryBlack;
+  }
+  &__name-end-white {
+    color: $primaryWhite;
+  }
+}
