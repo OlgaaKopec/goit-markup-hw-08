@@ -1,6 +1,36 @@
 @import "../utils/globals";
 @import "../utils/variables";
+@import "../utils/mixins";
 
+.strenghts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: -94px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  &__icons {
+    background: $secodaryLightWhite;
+    border-radius: 4px;
+    align-items: center;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  &__text {
+    line-height: 1.7;
+    color: $secodaryLightGrey;
+    font-size: 14px;}
+
+}
+
+
+
+// @include desktop{ DESKTOP!!!!!!
 .strenghts {
     display: flex;
     justify-content: center;

@@ -25,6 +25,12 @@
           <a class="logo" href="#">
             <span class="logo__name-start">Web</span><span class="logo__name-end">Studio</span>
           </a>
+          <button class="mobile-menu__toggle js-open-menu">
+            <svg width="24" height="16">
+              <use href="./images/icons.svg#icon-menu_24px"></use>
+            </svg>
+          </button>
+    </nav>
           <ul class="header__navigation">
             <li><a class="header__navigation-item header__navigation-item--active" href="#">Agencja</a></li>
             <li><a class="header__navigation-item" href="portfolio.html">Portfolio</a></li>
@@ -44,51 +50,7 @@
             </svg>
             +48 111 111 111
           </a>
-          <div class="menu-container js-menu-container" id="mobile-menu">
-            <button class="menu-toggle js-close-menu">
-              <svg
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </button>
-      
-            <ul class="mobile-menu">
-              <li><a href="" class="link">About</a></li>
-              <li><a href="" class="link">Products</a></li>
-              <li><a href="" class="link">Contacts</a></li>
-              <li><a href="" class="link">Career</a></li>
-            </ul>
-          </div>
         </div>
-      </div>
-      <button
-          class="menu-toggle js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg
-            width="24"
-            height="24"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
     </header>
     <main>
       <section class="main-window section">
@@ -151,7 +113,7 @@
           </ul>
         </div>
       </section>
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2>Czym się zajmujemy</h2>
           <ul class="activities__list">
@@ -175,7 +137,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <section class="section our-team">
         <div class="container">
           <h2>Nasz zespół</h2>
@@ -377,6 +339,19 @@
         </div>
       </section>
     </main>
+    <div class="menu-container js-menu-container">
+      <button class="menu-toggle js-close-menu">&times;</button>
+     
+        <ul class="mobile-menu">
+          <div class="header__navigation">
+          <li><a class="header__navigation-item header__navigation-item--active" href="#">Agencja</a></li>
+          <li><a class="header__navigation-item" href="portfolio.html">Portfolio</a></li>
+          <li><a class="header__navigation-item" href="#">Kontakt</a></li>
+          <li><a class="header__contact-item" href="tel:48111111111">+48 111 111 111</a></li>
+          <li><a class="header__contact-item" href="info@devstudio.com">info@devstudio.com</a></li>
+    </ul>
+    </div>
+
     <footer class="footer-wrapper">
       <div class="container">
         <div>
@@ -425,11 +400,13 @@
             <label class="newsletter__label">
               <input class="newsletter__frame" name="email" placeholder="E-mail" />
             </label>
+            <div>
             <button class="newsletter__button" type="submit">
               Zapisz się<svg class="newsletter__button-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-icon-send-footer"></use>
               </svg>
             </button>
+          </div>
           </form>
         </div>
       </div>
@@ -503,13 +480,7 @@
         </form>
       </div>
   </div>
-    <script src="./js/modal.js"></script>
-    <script
-    defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-    crossorigin="anonymous"
-  ></script>
+  <script defer src="./js/modal.js"></script>
   <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

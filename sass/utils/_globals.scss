@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 * {
     margin: 0px;
@@ -31,11 +32,21 @@ img {
 }
 
 .container {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 480px;
+  margin: auto;
+  padding: 0 15px;
+
+  @mixin tablet {
+      max-width:768px;
+    }
+  @mixin desktop {
+      max-width:1200px;
+    }
   }
+
   
   .section {
-    padding: 94px 0px;
+    padding: 60px 0px;
+    @include desktop {
+      padding: 94px 0px;}
   }
