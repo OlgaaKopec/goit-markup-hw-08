@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>hw7-main page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -25,7 +26,7 @@
           <a class="logo" href="#">
             <span class="logo__name-start">Web</span><span class="logo__name-end">Studio</span>
           </a>
-          <button class="mobile-menu__toggle js-open-menu">
+          <button class="menu__toggle js-open-menu">
             <svg width="24" height="16">
               <use href="./images/icons.svg#icon-menu_24px"></use>
             </svg>
@@ -145,10 +146,16 @@
             <li class="our-team__item">
               <figure>
                 <img
-                  src="images/john-doe-1.jpg"
+                  src="john-doe-1"
+                  srcset="
+                  ./images/img1desk@1x.jpg 270w,
+                  ./images/img1desk@2x.jpg 540w,
+                  ./images/img1tab@1x.jpg 354w,
+                  ./images/img1tab@2x.jpg 708w,
+                  ./images/img1mob@1x.jpg 450w,
+                  ./images/img1mob@2x.jpg 900w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 90vw"
                   alt="uśmiechnięty pan w okularach"
-                  height="260"
-                  width="270"
                 />
                 <figcaption>
                   <div class="our-team__name-color">John Doe</div>
@@ -181,10 +188,16 @@
             <li class="our-team__item">
               <figure>
                 <img
-                  src="images/john-doe-2.jpg"
+                  src="john-doe-2"
+                  srcset="
+                  ./images/img2desk@1x.jpg 270w,
+                  ./images/img2desk@2x.jpg 540w,
+                  ./images/img2tab@1x.jpg 354w,
+                  ./images/img2tab@2x.jpg 708w,
+                  ./images/img2mob@1x.jpg 450w,
+                  ./images/img2mob@2x.jpg 900w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 90vw"
                   alt="uśmiechnięta blondynka"
-                  height="260"
-                  width="270"
                 />
                 <figcaption>
                   <div class="our-team__name-color">John Doe</div>
@@ -217,10 +230,16 @@
             <li class="our-team__item">
               <figure>
                 <img
-                  src="images/john-doe-3.jpg"
+                  src="john-doe-3"
+                  srcset="
+                  ./images/img3desk@1x.jpg 270w,
+                  ./images/img3desk@2x.jpg 540w,
+                  ./images/img3tab@1x.jpg 354w,
+                  ./images/img3tab@2x.jpg 708w,
+                  ./images/img3mob@1x.jpg 450w,
+                  ./images/img3mob@2x.jpg 900w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 90vw"
                   alt="uśmiechnięty pan patrzący w swoje lewo"
-                  height="260"
-                  width="270"
                 />
                 <figcaption>
                   <div class="our-team__name-color">John Doe</div>
@@ -253,10 +272,16 @@
             <li class="our-team__item">
               <figure>
                 <img
-                  src="images/john-doe-4.jpg"
+                  src="john-doe-4"
+                  srcset="
+                  ./images/img4desk@1x.jpg 270w,
+                  ./images/img4desk@2x.jpg 540w,
+                  ./images/img4tab@1x.jpg 354w,
+                  ./images/img4tab@2x.jpg 708w,
+                  ./images/img4mob@1x.jpg 450w,
+                  ./images/img4mob@2x.jpg 900w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 90vw"
                   alt="pan z brodą na dworze"
-                  height="260"
-                  width="270"
                 />
                 <figcaption>
                   <div class="our-team__name-color">John Doe</div>
@@ -339,19 +364,6 @@
         </div>
       </section>
     </main>
-    <div class="menu-container js-menu-container">
-      <button class="menu-toggle js-close-menu">&times;</button>
-     
-        <ul class="mobile-menu">
-          <div class="header__navigation">
-          <li><a class="header__navigation-item header__navigation-item--active" href="#">Agencja</a></li>
-          <li><a class="header__navigation-item" href="portfolio.html">Portfolio</a></li>
-          <li><a class="header__navigation-item" href="#">Kontakt</a></li>
-          <li><a class="header__contact-item" href="tel:48111111111">+48 111 111 111</a></li>
-          <li><a class="header__contact-item" href="info@devstudio.com">info@devstudio.com</a></li>
-    </ul>
-    </div>
-
     <footer class="footer-wrapper">
       <div class="container">
         <div>
@@ -480,6 +492,16 @@
         </form>
       </div>
   </div>
+  <div class="menu js-menu-container">
+    <button class="menu__toggle js-close-menu">&times;</button>
+   <div class="menu__container"></div>
+      <ul class="menu__nav">
+        <li><a href="#">Agencja</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="tel:48111111111">+48 111 111 111</a></li>
+        <li><a href="info@devstudio.com">info@devstudio.com</a></li>
+  </ul>
   <script defer src="./js/modal.js"></script>
   <script defer src="js/mobile-menu.js"></script>
   </body>

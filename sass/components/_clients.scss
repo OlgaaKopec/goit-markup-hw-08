@@ -5,18 +5,28 @@
 
 .our-clients {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  max-width: 450px;
+  max-height: 399px;
+  gap: 2.2vw;
+  margin-top: -20px;
   
   cursor: pointer;
   color: $secondaryLighterGrey;
   &__outline {
     border: 1px solid;
     border-radius: 4px;
-    width: 170px;
+    width: 40vw;
+    max-width: 210px;
     height: 92px;
     padding-top: 16px;
     padding-bottom: 16px;
-    fill: currentColor;}
+    fill: currentColor;
+
+    @include desktop{
+      width: 170px;
+    }
     &__item{
 &:hover,
 &:focus {
@@ -25,29 +35,29 @@
   transition-duration: $transitionDurationTimeDefault;
   transition-timing-function: $transitionTimingDefault;
 }}
-}
+}}
 
 
 // desktop!!!!!!
-.our-clients {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    color: $secondaryLighterGrey;
-    &__outline {
-      border: 1px solid;
-      border-radius: 4px;
-      width: 170px;
-      height: 92px;
-      padding-top: 16px;
-      padding-bottom: 16px;
-      fill: currentColor;}
-      &__item{
-  &:hover,
-  &:focus {
-    color: $primaryBlue;
-    outline: none;
-    transition-duration: $transitionDurationTimeDefault;
-    transition-timing-function: $transitionTimingDefault;
-  }}
-  }
+// .our-clients {
+//     display: flex;
+//     justify-content: space-between;
+//     cursor: pointer;
+//     color: $secondaryLighterGrey;
+//     &__outline {
+//       border: 1px solid;
+//       border-radius: 4px;
+//       width: 170px;
+//       height: 92px;
+//       padding-top: 16px;
+//       padding-bottom: 16px;
+//       fill: currentColor;}
+//       &__item{
+//   &:hover,
+//   &:focus {
+//     color: $primaryBlue;
+//     outline: none;
+//     transition-duration: $transitionDurationTimeDefault;
+//     transition-timing-function: $transitionTimingDefault;
+//   }}
+//   }

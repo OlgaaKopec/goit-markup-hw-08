@@ -9,26 +9,42 @@
   letter-spacing: 0.03em;
   display: flex;
   flex-direction: column;
-  gap: 78px;
-// .container {
-//   // gap: 70px;
-}
+  text-align: center;
+  padding: 60px 0;
+
+  @include desktop {
+      gap: 78px;
+.container {
+  gap: 70px;}
+}}
 
 
 .address {
   line-height: 1.7;
   font-style: normal;
 &__street{
-  margin-bottom:9px;
+  margin-bottom:8px;
+
+  @include desktop{
+    margin-bottom:9px;
+  }
       &--height{
         margin-top: 20px;
       }
     }
   &__item {
-    margin-bottom:9px;
+    margin-bottom:8px;
+
+    @include desktop{
+      margin-bottom:9px;
+    }
   }
   &__item-underline{
+    margin-bottom:8px;
+
+    @include desktop{
       margin-bottom:9px;
+    }
       text-decoration: underline;
       color: rgba(255, 255, 255, 0.6);
       &:hover,

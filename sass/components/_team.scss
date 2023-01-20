@@ -25,7 +25,10 @@ flex-wrap: wrap;
 }
 &__profession-color {
   color: $secodaryLightGrey;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
+  @include desktop{
+    margin-bottom: 30px;
+  }
 }
 }
 

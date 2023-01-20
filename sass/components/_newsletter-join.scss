@@ -3,19 +3,27 @@
 @import "../utils/mixins";
 
 .newsletter{
-  margin-top:12px;
+  margin-top: 60px;
   display:flex;
   flex-direction: column;
+
+  @include desktop {
+    margin-top:12px;
+  }
 
 &__frame {
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    width: 358px;
+    max-width: 100vw;
+    min-width: 290px;
     height: 50px;
     background: $secondaryDarkGrey;
-    padding-left: 16px;
     color: $secodaryLightGrey;
+
+    @include desktop {
+       padding-left: 16px;
+    }
     &:hover,
     &:focus{
       border-color: $primaryBlue;
@@ -32,7 +40,11 @@
     cursor: pointer;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    margin: 12px 0 0 12px; }
+    margin: 20px 0;
+  
+  @include desktop{
+    margin: 12px 0 0 12px;
+  }}
 
     &__button-icon {
       margin-left: 24px;
@@ -43,40 +55,40 @@
 }
 
 // @include desktop{ DESKTOP!!!!!!
-.newsletter{
-  margin-top:12px;
+// .newsletter{
+//   margin-top:12px;
 
-&__frame {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    width: 358px;
-    height: 50px;
-    background: $secondaryDarkGrey;
-    padding-left: 16px;
-    color: $secodaryLightGrey;
-    &:hover,
-    &:focus{
-      border-color: $primaryBlue;
-    }
-  }
-  &__button {
-    width: 200px;
-    height: 50px;
-    font-weight: 700;
-    font-size: 16px;
-    color: $primaryWhite;
-    background-color: $primaryBlue;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    margin: 12px 0 0 12px; }
+// &__frame {
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+//     border-radius: 4px;
+//     width: 358px;
+//     height: 50px;
+//     background: $secondaryDarkGrey;
+//     padding-left: 16px;
+//     color: $secodaryLightGrey;
+//     &:hover,
+//     &:focus{
+//       border-color: $primaryBlue;
+//     }
+//   }
+//   &__button {
+//     width: 200px;
+//     height: 50px;
+//     font-weight: 700;
+//     font-size: 16px;
+//     color: $primaryWhite;
+//     background-color: $primaryBlue;
+//     border: none;
+//     cursor: pointer;
+//     border-radius: 4px;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//     margin: 12px 0 0 12px; }
 
-    &__button-icon {
-      margin-left: 24px;
-    }
-&__label{
-  fill: $secodaryLightGrey;
-}
-}
+//     &__button-icon {
+//       margin-left: 24px;
+//     }
+// &__label{
+//   fill: $secodaryLightGrey;
+// }
+// }

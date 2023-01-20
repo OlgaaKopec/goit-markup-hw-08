@@ -72,15 +72,20 @@
       }
     } 
     &__title {
+      max-width: 370px;
       font-style: normal;
       font-weight: 700;
       font-size: 20px;
       line-height: 23px;
+      justify-content: center;
       text-align: center;
       letter-spacing: 0.03em;
       color: $primaryBlack;
+      margin: 10px 20px 15px 40px;
+
+      @include desktop{
       margin-top: 20px;
-      margin-bottom: 12px;
+      margin-bottom: 12px;}
     }
     &__form {
       display: flex;
@@ -193,6 +198,7 @@
     &__checkbox-icon {
       position: absolute;
       opacity: 0;
+      margin-top:2px;
   }}
   
   
