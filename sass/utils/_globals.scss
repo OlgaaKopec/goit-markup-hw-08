@@ -19,7 +19,6 @@ h2 {
     font-size: 36px;
     line-height: 1.2;
     margin-bottom: 50px;
-    text-align: center;
 }
 
 ul{
@@ -29,6 +28,8 @@ ul{
 svg,
 img {
   vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -47,6 +48,11 @@ img {
   
   .section {
     padding: 60px 0px;
-    @include desktop {
+
+    @mixin tablet {
+      padding: 60px 0px;
+    }
+
+    @mixin desktop {
       padding: 94px 0px;}
   }

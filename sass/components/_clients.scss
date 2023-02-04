@@ -2,41 +2,58 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
+.headers .container {
+  display: flex;
+  justify-content: center;
+}
 
 .our-clients {
+  padding: 0 15px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  max-width: 450px;
+  width: 100%;
+  max-width: 480px;
   max-height: 399px;
-  gap: 2.2vw;
-  margin-top: -20px;
-  
+  gap: 30px; 
   cursor: pointer;
   color: $secondaryLighterGrey;
+
+  @include tablet {
+    max-height: 300px;
+    max-width: 768px;
+  }
   &__outline {
     border: 1px solid;
-    border-radius: 4px;
-    width: 40vw;
-    max-width: 210px;
+    border-radius: 4px; 
     height: 92px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px 0;
     fill: currentColor;
+    justify-content: center;
 
-    @include desktop{
-      width: 170px;
+    @include tablet {
+      max-width: 226px;
     }
-    &__item{
+
+    @include desktop {
+      max-width: 170px;
+  }}
+
+  &__item {
+      width: auto;
+      max-width: 210px;
+
+      @include tablet{
+        flex-wrap: wrap;
+      }
 &:hover,
-&:focus {
+&:focus{
   color: $primaryBlue;
   outline: none;
   transition-duration: $transitionDurationTimeDefault;
   transition-timing-function: $transitionTimingDefault;
 }}
-}}
-
+}
 
 // desktop!!!!!!
 // .our-clients {
@@ -59,5 +76,4 @@
 //     outline: none;
 //     transition-duration: $transitionDurationTimeDefault;
 //     transition-timing-function: $transitionTimingDefault;
-//   }}
-//   }
+//   }}}}

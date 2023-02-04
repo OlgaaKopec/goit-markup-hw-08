@@ -2,7 +2,7 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <title>hw7-main page</title>
+    <title>hw8-main page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -25,13 +25,12 @@
         <nav class="header">
           <a class="logo" href="#">
             <span class="logo__name-start">Web</span><span class="logo__name-end">Studio</span>
-          </a>
+          </a></nav>
           <button class="menu__toggle js-open-menu">
             <svg width="24" height="16">
               <use href="./images/icons.svg#icon-menu_24px"></use>
             </svg>
           </button>
-    </nav>
           <ul class="header__navigation">
             <li><a class="header__navigation-item header__navigation-item--active" href="#">Agencja</a></li>
             <li><a class="header__navigation-item" href="portfolio.html">Portfolio</a></li>
@@ -63,7 +62,7 @@
       <section class="section">
         <div class="container">
           <ul class="strenghts">
-            <li>
+            <li class="strenghts__card">
               <div class="strenghts__icons">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#icon-antenna"></use>
@@ -75,7 +74,7 @@
                 sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="strenghts__card">
               <div class="strenghts__icons">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#icon-clock"></use>
@@ -87,7 +86,7 @@
                 sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="strenghts__card">
               <div class="strenghts__icons">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#icon-diagram"></use>
@@ -99,7 +98,7 @@
                 sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="strenghts__card">
               <div class="strenghts__icons">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#icon-astronaut"></use>
@@ -114,7 +113,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="section">
+      <section class="section activities">
         <div class="container">
           <h2>Czym się zajmujemy</h2>
           <ul class="activities__list">
@@ -138,7 +137,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <section class="section our-team">
         <div class="container">
           <h2>Nasz zespół</h2>
@@ -316,7 +315,7 @@
       </section>
       <section class="section headers">
         <div class="container">
-          <h2 class="general-inside-title">Nasi klienci</h2>
+          <h2>Nasi klienci</h2>
           <ul class="our-clients">
             <li class="our-clients__item" tabindex="0">
               <a
@@ -493,15 +492,30 @@
       </div>
   </div>
   <div class="menu js-menu-container">
-    <button class="menu__toggle js-close-menu">&times;</button>
-   <div class="menu__container"></div>
+    <button class="menu__close-button js-close-menu">x</button>
+   <div class="menu__container">
       <ul class="menu__nav">
-        <li><a href="#">Agencja</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="#">Kontakt</a></li>
-        <li><a href="tel:48111111111">+48 111 111 111</a></li>
-        <li><a href="info@devstudio.com">info@devstudio.com</a></li>
-  </ul>
+        <li><a class="menu__link" href="#">Agencja</a></li>
+        <li><a class="menu__link menu__link--style" href="portfolio.html">Portfolio</a></li>
+        <li><a class="menu__link" href="#">Kontakt</a></li>
+      </ul>
+      <a class="menu__mobile-phone" href="tel:48111111111">+48 111 111 111</a></li>
+      <a class="menu__mobile-email" href="info@devstudio.com">info@devstudio.com</a></li>
+      <div class="menu__mobile-linkmedia">
+      <a class="mobile-linkmedia" href="#">Instagram
+        <span class="mobile-linkmedia__space">&nbsp;|&nbsp;</span>
+       </a>
+       <a class="mobile-linkmedia" href="#">Twitter
+        <span class="mobile-linkmedia__space">&nbsp;|&nbsp;</span>
+       </a>
+       <a class="mobile-linkmedia" href="#">Facebook
+        <span class="mobile-linkmedia__space">&nbsp;|&nbsp;</span>
+       </a>
+       <a class="mobile-linkmedia" href="#">LinkedIn
+       </a>
+      </div>
+    </div>
+  </div>
   <script defer src="./js/modal.js"></script>
   <script defer src="js/mobile-menu.js"></script>
   </body>

@@ -29,11 +29,13 @@
       background-color: $primaryBlue;
       border: none;
       cursor: pointer;
-      margin-top: 30px;
-      margin-bottom: 200px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
       border-radius: 4px;
-      padding: 0px;
+
+      @include tablet {
+margin-left:80px;
+      }
+    
     }
     &__close-button {
       color: $primaryBlack;
@@ -190,15 +192,18 @@
     position: relative;
     &__label {
       position: relative;
-      // display: flex;
-      // align-items: center;
-      // gap: 7px;
-      // margin-left: 20px;
+
+      @include desktop{
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-left: 20px;}
     }
     &__checkbox-icon {
       position: absolute;
       opacity: 0;
       margin-top:2px;
+      margin-left: -19px;
   }}
   
   
@@ -227,3 +232,68 @@
     opacity: 0;
     transition: opacity 500ms 500ms ease, visibility 500ms 500ms ease;
   }
+
+  .menu__container{
+    display:flex;
+    position: absolute;
+    flex-direction: column;
+    list-style: none;
+ 
+  }
+
+  .menu__nav {
+    list-style: none;
+  }
+
+  .menu__link {
+    display:block;
+font-weight: 500;
+font-size: 40px;
+line-height: 47px;
+letter-spacing: 0.02em;
+color: $primaryBlack;
+text-decoration: none;
+
+
+&--style{
+padding-bottom: 32px;
+padding-top: 32px;
+  }}
+
+  .menu__mobile-phone{
+    display: flex;
+    font-weight: 500;
+    font-size: 34px;
+    letter-spacing: 0.02em;
+    color: $primaryBlue;
+    text-decoration: none;
+    outline: none;
+    padding-top: 302px;
+    padding-bottom: 32px;
+  }
+
+  .menu__mobile-email{
+  display: block;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  color: $secodaryLightGrey;
+  text-decoration: none;
+  outline: none;
+  padding-bottom: 64px;
+}
+
+
+.menu__mobile-linkmedia{
+display: inline;
+}
+
+.mobile-linkmedia{
+font-size: 18px;
+letter-spacing: 0.02em;
+color: $primaryBlue;
+text-decoration: none;
+outline: none;
+
+&__space{
+  color: rgba(33, 33, 33, 0.2);
+}}

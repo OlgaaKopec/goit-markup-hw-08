@@ -6,10 +6,26 @@
   background-color: $secodaryLightWhite;
   display: flex;
 flex-wrap: wrap;
+
+.container {
+  justify-content: center;
+}
+
+@include tablet {
+  column-gap: 30px;
+}
+
 &__list {
 
   justify-content: space-between;
   text-align: center;
+
+  @include tablet{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 768px;
+    gap: 30px;
+  }
 }
 &__item {
   background: $primaryWhite;
@@ -17,6 +33,11 @@ flex-wrap: wrap;
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   font-size: 16px;
+
+  @include tablet {
+max-width: 354px;
+
+  }
 }
 &__name-color {
   font-weight: 500;
