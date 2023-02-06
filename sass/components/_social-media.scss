@@ -2,67 +2,67 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
-  .media-links {
-    fill: $secondaryLighterGrey;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    gap: 10px;
-    &__item {
-      border-radius: 50%;
-      padding: 12px;
-      margin-bottom: 20px;
-      &:hover,
-      &:focus{
-        fill: $primaryWhite;
-        background-color: $primaryBlue;
-        outline: none;
-        transition-duration: $transitionDurationTimeDefault;
-        transition-timing-function: $transitionTimingDefault;
-      }
-    }
-  }
-    
-  .social-links-footer{
-    line-height: 1;
-    margin-top: 60px;
- 
-@include tablet {
-  margin-top:7px;
-  margin-left: 144px;
-}
-
-    @include desktop{
-      margin-top: 12px;
-    }
-&__title {
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-&__icons {
-  fill: $primaryWhite;
-  cursor: pointer;
+.media-links {
+  fill: $secondaryLighterGrey;
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
   gap: 10px;
-
- 
-  @include desktop {
-    padding-top: 12px;
-  }
-}
-&__item {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  padding: 12px 12px;
-
-  &:hover,
-  &:focus{
-    background-color: $primaryBlue;
+  &__item {
     border-radius: 50%;
-    outline: none;
-    transition-duration: $transitionDurationTimeDefault;
-    transition-timing-function: $transitionTimingDefault;
+    padding: 12px;
+    margin-bottom: 20px;
+    &:hover,
+    &:focus {
+      fill: $primaryWhite;
+      background-color: $primaryBlue;
+      outline: none;
+      transition-duration: $transitionDurationTimeDefault;
+      transition-timing-function: $transitionTimingDefault;
+    }
   }
 }
+
+.social-links-footer {
+  line-height: 1;
+  margin-top: 60px;
+
+  @include tablet {
+    margin-top: 7px;
+    margin-left: 144px;
+  }
+
+  @include desktop {
+    margin-top: 12px;
+    margin-left: 0px;
+  }
+  &__title {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &__icons {
+    fill: $primaryWhite;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    @include desktop {
+      padding-top: 12px;
+    }
+  }
+  &__item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 12px 12px;
+
+    &:hover,
+    &:focus {
+      background-color: $primaryBlue;
+      border-radius: 50%;
+      outline: none;
+      transition-duration: $transitionDurationTimeDefault;
+      transition-timing-function: $transitionTimingDefault;
+    }
+  }
 }

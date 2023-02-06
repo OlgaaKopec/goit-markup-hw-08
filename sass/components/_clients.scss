@@ -5,6 +5,11 @@
 .headers .container {
   display: flex;
   justify-content: center;
+
+  @include desktop {
+    flex-direction: column;
+    padding: 0px;
+  }
 }
 
 .our-clients {
@@ -15,7 +20,7 @@
   width: 100%;
   max-width: 480px;
   max-height: 399px;
-  gap: 30px; 
+  gap: 30px;
   cursor: pointer;
   color: $secondaryLighterGrey;
 
@@ -23,9 +28,15 @@
     max-height: 300px;
     max-width: 768px;
   }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: auto;
+    max-width: 1200px;
+  }
   &__outline {
     border: 1px solid;
-    border-radius: 4px; 
+    border-radius: 4px;
     height: 92px;
     padding: 16px 0;
     fill: currentColor;
@@ -37,43 +48,27 @@
 
     @include desktop {
       max-width: 170px;
-  }}
+    }
+  }
 
   &__item {
-      width: auto;
-      max-width: 210px;
+    width: auto;
+    max-width: 210px;
 
-      @include tablet{
-        flex-wrap: wrap;
-      }
-&:hover,
-&:focus{
-  color: $primaryBlue;
-  outline: none;
-  transition-duration: $transitionDurationTimeDefault;
-  transition-timing-function: $transitionTimingDefault;
-}}
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    @include desktop {
+      width: 170px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $primaryBlue;
+      outline: none;
+      transition-duration: $transitionDurationTimeDefault;
+      transition-timing-function: $transitionTimingDefault;
+    }
+  }
 }
-
-// desktop!!!!!!
-// .our-clients {
-//     display: flex;
-//     justify-content: space-between;
-//     cursor: pointer;
-//     color: $secondaryLighterGrey;
-//     &__outline {
-//       border: 1px solid;
-//       border-radius: 4px;
-//       width: 170px;
-//       height: 92px;
-//       padding-top: 16px;
-//       padding-bottom: 16px;
-//       fill: currentColor;}
-//       &__item{
-//   &:hover,
-//   &:focus {
-//     color: $primaryBlue;
-//     outline: none;
-//     transition-duration: $transitionDurationTimeDefault;
-//     transition-timing-function: $transitionTimingDefault;
-//   }}}}

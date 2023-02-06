@@ -2,16 +2,22 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
-.newsletter{
+.newsletter {
   margin-top: 60px;
-  display:flex;
+  display: flex;
   flex-direction: column;
 
   @include desktop {
-    margin-top:12px;
+    display: flex;
+    margin-top: 12px;
+
+    &__form {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
-&__frame {
+  &__frame {
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -21,18 +27,19 @@
     background: $secondaryDarkGrey;
     color: $secodaryLightGrey;
 
-    @include tablet{
-      width:450px;
+    @include tablet {
+      width: 450px;
     }
-
     @include desktop {
-       padding-left: 16px;
+      width: 358px;
+      padding-left: 16px;
     }
     &:hover,
-    &:focus{
+    &:focus {
       border-color: $primaryBlue;
     }
   }
+
   &__button {
     width: 200px;
     height: 50px;
@@ -45,54 +52,17 @@
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     margin: 20px 0;
-  
-  @include desktop{
-    margin: 12px 0 0 12px;
-  }}
 
-    &__button-icon {
-      margin-left: 24px;
+    @include desktop {
+      margin-top: 0;
+      margin-left: 12px;
     }
-&__label{
-  fill: $secodaryLightGrey;
+  }
+
+  &__button-icon {
+    margin-left: 24px;
+  }
+  &__label {
+    fill: $secodaryLightGrey;
+  }
 }
-}
-
-// @include desktop{ DESKTOP!!!!!!
-// .newsletter{
-//   margin-top:12px;
-
-// &__frame {
-//     border: 1px solid rgba(255, 255, 255, 0.3);
-//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-//     border-radius: 4px;
-//     width: 358px;
-//     height: 50px;
-//     background: $secondaryDarkGrey;
-//     padding-left: 16px;
-//     color: $secodaryLightGrey;
-//     &:hover,
-//     &:focus{
-//       border-color: $primaryBlue;
-//     }
-//   }
-//   &__button {
-//     width: 200px;
-//     height: 50px;
-//     font-weight: 700;
-//     font-size: 16px;
-//     color: $primaryWhite;
-//     background-color: $primaryBlue;
-//     border: none;
-//     cursor: pointer;
-//     border-radius: 4px;
-//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-//     margin: 12px 0 0 12px; }
-
-//     &__button-icon {
-//       margin-left: 24px;
-//     }
-// &__label{
-//   fill: $secodaryLightGrey;
-// }
-// }

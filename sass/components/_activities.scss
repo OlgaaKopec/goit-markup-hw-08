@@ -2,21 +2,23 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
-.activities{
-  display:none;
-
-  @include desktop{
-    display:flex;
-  }
-}
-
 .activities__list {
   @include desktop{
   display: flex;
   justify-content: space-between;
+  gap:30px;
 }}
 
 .activities{
+  display:none;
+
+  @include desktop{
+    display:flex;}
+  
+.container {
+      display:flex;
+      justify-content: center;
+    }
   &__text {
   color: $primaryWhite;
   font-weight: 700;
