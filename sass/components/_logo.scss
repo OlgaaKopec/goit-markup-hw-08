@@ -2,14 +2,18 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
-.logo{
-    text-decoration: none;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-    padding-top: 4px;
+.logo {
+  text-decoration: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  padding-top: 4px;
+
+  @include desktop {
+    padding-top: 0;
+  }
 
   &__name-start {
     color: $primaryBlue;
