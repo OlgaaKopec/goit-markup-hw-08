@@ -14,15 +14,20 @@
 
 .our-clients {
   padding: 0 15px;
+  margin-left: 55px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
-  max-width: 480px;
-  max-height: 399px;
   gap: 30px;
   cursor: pointer;
   color: $secondaryLighterGrey;
+
+  @media screen and (min-width: "480px") {
+    flex-wrap: wrap;
+    max-width: 480px;
+    max-height: 399px;
+    margin-left: 0px;
+  }
 
   @include tablet {
     max-height: 300px;
